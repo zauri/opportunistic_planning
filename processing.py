@@ -4,9 +4,9 @@ import pandas as pd
 from opportunistic_planning.prediction import get_median_error, filter_for_dimension
 
 
-def calculate_prediction_error(data, distances_dict, error_function,
+def calculate_prediction_error(data, distances_dict, error_function, n=10, 
                              dimensions=[[2, 'xy'], [3, 'xyz']], 
-                             n=10, seqcol='sequence', coords='coordinates', error='error'):
+                             seqcol='sequence', coords='coordinates', error='error'):
     '''
     Calculates prediction error for all combinations of parameter values (c, k, dimension).
 
@@ -73,12 +73,10 @@ def calculate_prediction_error(data, distances_dict, error_function,
         except:
             food_k = []
 
-        # set parameters for containment to default values
-        c1 = {obj: 1.0 for obj in objects}
-        k1 = {obj: 1.0 for obj in objects}
         
 
-        # go through all possible parameter ranges
+        # go through parameter ranges
+        # set k to current param if object has relational dependencies, else 1.0
         for k2 in np.arange(1.1, 2.0, 0.1):
             k_food = round(k2, 2)
             k1 = {obj: k_food if obj in food_k else 1.0 for obj in objects}
@@ -91,6 +89,7 @@ def calculate_prediction_error(data, distances_dict, error_function,
 
                 for c in np.arange(1.0, 2.0, 0.1):
                     c = round(c, 1)
+                    # set c to current param if object contained, else 1.0
                     c1 = {obj: c if obj in data.at[row, 'containment'] else 1.0 for obj in objects}
 
                     for dim in dimensions:
