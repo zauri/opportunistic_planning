@@ -60,17 +60,17 @@ def calculate_prediction_error(data, distances_dict, error_function, n=10,
         # get list of objects that have relational dependencies, if any (else set to empty list)
         try:
             strong_k = list(data.at[row, 'strong_k'].split(','))
-        except:
+        except AttributeError:
             strong_k = []
 
         try:
             mid_k = list(data.at[row, 'mid_k'].split(','))
-        except:
+        except AttributeError:
             mid_k = []
 
         try:
             food_k = list(data.at[row, 'food_k'].split(','))
-        except:
+        except AttributeError:
             food_k = []
 
         
@@ -182,7 +182,7 @@ def generate_distances_dict(data, dimensions=[[1, 'x'], [1, 'y'], [1, 'z'], [2, 
             for pos in new_start_coords:
                 try:
                     position = tuple(pos)
-                except:
+                except TypeError:
                     position = str(pos)
                 
                 distances_dict[dimension][ID][position] = {}
@@ -281,5 +281,5 @@ def save_results(file, filepath):
 def check_to_float(x):
     try:
         return float(x)
-    except:
+    except ValueError:
         return x

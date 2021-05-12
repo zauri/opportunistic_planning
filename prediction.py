@@ -108,7 +108,7 @@ def predict_editdist(distances_dict, ID, objects, coordinates, start_coordinates
         for obj in possible_items.keys():            
             try:
                 position = tuple(new_start_coords[coord_index])
-            except:
+            except TypeError:
                 position = str(new_start_coords[coord_index])
             
             possible_items[obj] = distances_dict[dimension[1]][ID][position][obj] ** k[obj] * c[obj]
@@ -170,7 +170,7 @@ def predict_prequential(distances_dict, ID, objects, coordinates, start_coordina
         for obj in possible_items.keys():            
             try:
                 position = tuple(new_start_coords[coord_index])
-            except:
+            except TypeError:
                 position = str(new_start_coords[coord_index])
             
             possible_items[obj] = distances_dict[dimension[1]][ID][position][obj] ** k[obj] * c[obj]
