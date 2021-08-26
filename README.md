@@ -19,6 +19,7 @@ Predicted sequences are compared to observed sequences to evaluate model perform
 - Spatial information about the task environment: item locations, subject location in each step, topology
 - Context knowledge: relational dependencies between items
 - Observed action sequence for the task
+
 :arrow_right: *'test_data.csv'* provides example data from table setting episodes in the needed format
 
 ## Example use case
