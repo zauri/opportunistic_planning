@@ -8,6 +8,9 @@ Equation for weighted cost (C):
 Parameters:
 - d: Euclidean distance between p and q
 - k: factor for relational dependencies
+    - *food_k* indicates that the given dish has (warm) food on it and so is brought to the table at a later point in the sequence
+    - *strong_k* is used for items that go below all other items, e.g., place mats or table cloths (normally taken first)
+    - *mid_k* indicates items that need to be taken before other items (e.g., plate to define place setting on the table, saucer before cup, etc.) 
 - c: factor for topology (containment)
 
 Predicted sequences are compared to observed sequences to evaluate model performance and to find the optimal parameter combination. Depending on which error function is used, the comparison either uses Damerau-Levenshtein edit distance as a similarity measure (having predicted the whole sequence in advance) or the accumulated prediction error for the prequential method (only one next action predicted in each step, which is then compared to the observed action).
@@ -16,10 +19,10 @@ Predicted sequences are compared to observed sequences to evaluate model perform
 - Spatial information about the task environment: item locations, subject location in each step, topology
 - Context knowledge: relational dependencies between items
 - Observed action sequence for the task
--> see test_data.csv 
+:arrow_right: *'test_data.csv'* provides example data from table setting episodes in the needed format
 
 ## Example use case
-Either use the provided main.py file, or run:
+Either use the provided *'main.py'* file, or run:
 
 ``` python
 import pandas as pd
