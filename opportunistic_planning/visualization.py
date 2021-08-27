@@ -25,7 +25,7 @@ def plot_dimensions(results_df, save=False, rnn=None):
     color_map = matplotlib.colors.ListedColormap(colors)
     ticks = ['x', 'y', 'z', 'xy', 'xz', 'yz', 'xyz']
     
-    fig = plt.figure(figsize=(24,16))
+    fig = plt.figure(figsize=(24,17))
     
     # add 3d background, set to white
     ax = fig.add_subplot(111, projection='3d')
@@ -53,6 +53,13 @@ def plot_dimensions(results_df, save=False, rnn=None):
     cb.set_alpha(0.8)
     cb.draw_all()
     cb.ax.set_yticklabels(ticks, fontsize=16)
+    
+    # set plot orientation
+    ax.azim = -40
+    ax.dist = 10
+    ax.elev = 10
+    
+    plt.margins(0, 0.01)
     
     if save == True:
         date = datetime.today().strftime('%Y-%m-%d')
