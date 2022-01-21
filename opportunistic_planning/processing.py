@@ -255,6 +255,9 @@ def read_results(file):
     results.columns = header
 
     results.drop(results.tail(1).index, inplace=True)
+    
+    # convert strings to numeric if possible
+    results = results.apply(pd.to_numeric, errors='ignore')
 
     return results
 
