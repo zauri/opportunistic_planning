@@ -181,7 +181,11 @@ def predict_prequential(distances_dict, ID, objects, coordinates, start_coordina
         
         prediction = minval
         observed = sequence[i]
-        error = 1 - damerauLevenshtein(prediction, observed)
+        
+        if prediction == observed:
+            error = 0
+        else:
+            error = 1
         
         errors.append(error)
         
