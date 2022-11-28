@@ -49,3 +49,11 @@ lowest_mean, lowest_mean_idx, lowest_median, results_median = processing.get_low
 visualization.plot_dimensions(results)
 
 ```
+
+## Dataset references
+- Meier, M., Mason, C., Porzel, R., Putze, F., & Schultz, T. (2018): Synchronized Multimodal Recording of a Table Setting Dataset. IROS 2018: Workshop on Latest Advances in Big Activity Data Sources for Robotics & New Challenges
+- Rohrbach, M., Rohrbach, A., Regneri, M., Amin, S., Andriluka, M., Pinkal, M., Schiele, B. (2015): Recognizing Fine-Grained and Composite Activities using Hand-Centric Features and Script Data, IJCV 2015 ([MPII Cooking 2 Dataset](https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/research/human-activity-recognition/mpii-cooking-2-dataset))
+- Rybok, L., Friedberger, S., Hanebeck, U. D., and Stiefelhagen, R. (2011): The KIT Robo-Kitchen Data set for the Evaluation of View-based Activity Recognition Systems, IEEE-RAS International Conference on Humanoid Robots, Bled, Slovenia, October 2011 ([KIT Robo-Kitchen Data set](https://cvhci.anthropomatik.kit.edu/~lrybok/projects/kitchen/))
+- Tenorth, M., Bandouch, J., & Beetz, M. (2009): The TUM kitchen data set of everyday manipulation activities for motion tracking and action recognition. IEEE International
+Workshop in conjunction with ICCV2009 ([TUM Kitchen Dataset](https://ias.in.tum.de/dokuwiki/software/kitchen-activity-data))
+- Uhde, C., Berberich, N., Ramirez-Amaro, K., and Cheng, C. (2020): The Robot as Scientist: Using Mental Simulation to Test Causal Hypotheses Extracted from Human Activities in Virtual Reality, IROS 2020 ([HAVE DatA Set](https://www.ce.cit.tum.de/ics/ics-data-sets/have-data-set/))
