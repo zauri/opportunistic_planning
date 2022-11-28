@@ -51,6 +51,8 @@ visualization.plot_dimensions(results)
 ```
 
 ## Dataset references
+- Damen, D. et al. (2018). Scaling egocentric vision: The EPIC-KITCHENS dataset. ECCV 2018,
+720–736  ([EPIC-KITCHENS data set](https://epic-kitchens.github.io/2022))
 - Meier, M., Mason, C., Porzel, R., Putze, F., & Schultz, T. (2018): Synchronized Multimodal Recording of a Table Setting Dataset. IROS 2018: Workshop on Latest Advances in Big Activity Data Sources for Robotics & New Challenges
 - Rohrbach, M., Rohrbach, A., Regneri, M., Amin, S., Andriluka, M., Pinkal, M., Schiele, B. (2015): Recognizing Fine-Grained and Composite Activities using Hand-Centric Features and Script Data, IJCV 2015 ([MPII Cooking 2 Dataset](https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/research/human-activity-recognition/mpii-cooking-2-dataset))
 - Rybok, L., Friedberger, S., Hanebeck, U. D., and Stiefelhagen, R. (2011): The KIT Robo-Kitchen Data set for the Evaluation of View-based Activity Recognition Systems, IEEE-RAS International Conference on Humanoid Robots, Bled, Slovenia, October 2011 ([KIT Robo-Kitchen Data set](https://cvhci.anthropomatik.kit.edu/~lrybok/projects/kitchen/))
